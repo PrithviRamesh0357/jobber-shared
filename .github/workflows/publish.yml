@@ -17,6 +17,7 @@ jobs:
           node-version: 20.x
       - run: npm install
       - run: npm run build
+      - run: cp package.json build/
       - run: |
           echo "@prithviramesh0357:registry=https://npm.pkg.github.com/" > build/.npmrc
       - run: npm publish
